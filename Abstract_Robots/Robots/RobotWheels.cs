@@ -9,7 +9,7 @@ namespace Robots_inc
     public class RobotWheels : RobotSpy
     {
         //1. עדכנו את הפעולה הבונה כך שתתאים לפעולת במחלקת העל
-        public RobotWheels() : base("Spyke") { } 
+        public RobotWheels(DateTime creationDate,double batteryStatus) : base("Spyke",creationDate,batteryStatus) { } 
 
         public override void MoveForward()
         {
@@ -27,9 +27,10 @@ namespace Robots_inc
         }
 
         public void WaveHands()
-        { 
+        {
             //3. הוסיפו התייחסות לסוללה 
+            setStatus(getStatus() - 2);
         }
-
+        
     }
 }
