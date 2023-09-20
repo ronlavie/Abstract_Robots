@@ -9,21 +9,23 @@ namespace Robots_inc
     public class RobotWheels : RobotSpy
     {
         //1. עדכנו את הפעולה הבונה כך שתתאים לפעולת במחלקת העל
-        public RobotWheels(DateTime creationDate,double batteryStatus) : base("Spyke",creationDate,batteryStatus) { } 
+        public RobotWheels(DateTime creationDate, double batteryStatus) : base("Spyke", creationDate, batteryStatus) { }
 
         public override void MoveForward()
         {
-            this.TurnWheels(1, 1);
+            TurnWheels(1, 1);
         }
         public override void TurnRight()
         {
-            this.TurnWheels(-1, 0);
+            TurnWheels(-1, 0);
         }
         //השלימו את הפעולות החסרות מתוך המצגת או על הבנתכם
 
         private void TurnWheels(int rightDir, int leftDir)
         {
-            //2. הוסיפו התייחסות לסוללה
+            //2. הוסיפו התייחסות לסוללה 
+            setStatus(getStatus() - 4.5);
+
         }
 
         public void WaveHands()
@@ -31,6 +33,15 @@ namespace Robots_inc
             //3. הוסיפו התייחסות לסוללה 
             setStatus(getStatus() - 2);
         }
-        
+
+        public override void MoveBackward()
+        {
+            TurnWheels(-1, -1);
+        }
+
+        public override void TurnLeft()
+        {
+            TurnWheels(0, -1);
+        }
     }
 }
