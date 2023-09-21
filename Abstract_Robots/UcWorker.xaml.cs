@@ -26,17 +26,29 @@ namespace Robots_inc
             this.DataContext = worker;
             LbId.Content = worker.getId();
             LbBday.Content = worker.getBirth().ToShortDateString();
+            DateTime today = DateTime.Now;
+            DateTime birthdate = worker.getBirth();
+            if (birthdate.Month == today.Month && birthdate.Day == today.Day)
+            {
+                LbBday.Content = LbBday.Content + "HAPPY BIRTHDAY 🍰🍰🎂🎂";
+            }
+
             if (worker is GeneralManager)
             {
-                LbRole.Content = "Big Boss";
+                LbRole.Content = "Big Boss .😁";
+                this.Background = Brushes.Purple;
+
             }
             else if (worker is OperationalWorker)
             {
-                LbRole.Content = "OpWorker";
+                LbRole.Content = "OpWorker👌";
+                this.Background = Brushes.Orange;
             }
             else
             {
-                LbRole.Content = "Worker";
+                LbRole.Content = "Worker🥲";
+                this.Background = Brushes.Yellow;
+
             }
         }
 

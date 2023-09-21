@@ -48,11 +48,10 @@ namespace Robots_inc
         {
             workers = new List<Worker>();
             workers.Add(new GeneralManager("j4", "2222", new DateTime(11 / 1 / 2000), "1234", 3336.0, 370.0));
-            workers.Add(new Worker("j2", "2522", new DateTime(11 / 3 / 2000), "1254", 3336.0, 370.0));
-            workers.Add(new OperationalWorker("j1", "2222", new DateTime(11 / 2 / 2000), "1214", 3336.0, 370.0));
-            workers.Add(new Worker("j3", "2322", new DateTime(11 / 4 / 2000), "3334", 22, 370.0));
-            workers.Add(new Worker("j5", "622", new DateTime(11 / 5 / 2000), "1239", 3336.0, 370.0));
-            workers.Add(new Worker("abdul",)
+            workers.Add(new OperationalWorker("j2", "2522", new DateTime(11 / 3 / 2000), "1254", 3336.0, 370.0));
+            workers.Add(new OperationalWorker("j3", "2322", new DateTime(11 / 4 / 2000), "3334", 52, 22));
+            workers.Add(new OperationalWorker("j5", "622", new DateTime(11 / 5 / 2000), "1239", 55, 22));
+            workers.Add(new OperationalWorker("jami", "622", new DateTime(11 / 5 / 2000), "1239", 55, 22));
             workers.Add(new OperationManager("gamzo", "453643", new DateTime(5 / 5 / 3312), "12347", 1244, 180, 151));
             workers.Add(new OperationManager("kirill", "45643", new DateTime(5 / 3 / 2312), "124747", 1264, 180, 1516));
             workers.Add(new OperationalWorker("kir", "36985", new DateTime(7 / 6 / 2100), "2221", 145, 333));
