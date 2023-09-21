@@ -21,19 +21,20 @@ namespace Robots_inc
             this.birthDate = bDate;
             this.password = pass;
         }
-     
+
 
         public string getName()
         {
             return this.fullName;
         }
-       
+
+        public string FullName { get { return fullName; } }
 
         public string getpass()
         {
             return this.password;
         }
-    
+
 
         public DateTime getBirth()
         {
@@ -48,12 +49,12 @@ namespace Robots_inc
         {
             return this.idNumber;
         }
-     
+
         public override string ToString()
         {
             string str = "";
-            if(birthDate.Equals(DateTime.Today))
-                str=" - HappyBirthDay";
+            if (birthDate.Equals(DateTime.Today))
+                str = " - HappyBirthDay";
             return fullName + " ID." + idNumber + str;
 
         }

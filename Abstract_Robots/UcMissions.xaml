@@ -87,19 +87,19 @@
         <!--- Robot in mission - רובוט במשימה -->
         <TextBlock Grid.Row="1" Grid.Column="2" Text="Robot In mission"
                    Style="{StaticResource tbMiniHeader}" FontSize="25"/>
-        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
+        <WrapPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2">
             <Image x:Name="imgModel"/>
             <TextBlock x:Name="tbBattery" Text="Battery" Style="{StaticResource tbData}"/>
-        </StackPanel>
+        </WrapPanel>
 
         <!-- Action - פעולות -->
         <TextBlock Grid.Row="1" Grid.Column="3" Text="Actions"
             Style="{StaticResource tbMiniHeader}" FontSize="25"/>
-        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
+        <WrapPanel Orientation="Vertical" Grid.Row="2" Grid.Column="3">
             <Button x:Name="btnCamera" Content="Camera" Click="btnCamera_Click"/>
             <Button x:Name="btnMove" Content="Move" Click="btnMove_Click"/>
             <Button x:Name="btnFinish" Content="Finish" Click="btnFinish_Click"/>
             <Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click"/>
-        </StackPanel>
+        </WrapPanel>
     </Grid>
 </UserControl>
